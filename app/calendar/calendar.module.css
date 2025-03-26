@@ -2,6 +2,9 @@
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .title {
@@ -10,9 +13,144 @@
   color: #333;
 }
 
-.calendar {
-  background: white;
+.calendarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.monthTitle {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  padding: 0 1rem;
+}
+
+.weekdayHeader {
+  text-align: center;
+  font-weight: 600;
+  padding: 0.5rem;
+  color: #666;
+}
+
+.weekdayHeader.sunday {
+  color: #ff4d4d;
+}
+
+.weekdayHeader.saturday {
+  color: #4d94ff;
+}
+
+.calendarDay {
+  position: relative;
+  padding: 0.75rem;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  min-height: 80px;
+  transition: all 0.2s ease;
+}
+
+.calendarDay:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dayNumber {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.clinicHours {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.today {
+  background-color: #e6f3ff;
+  border-color: #4d94ff;
+}
+
+.holiday {
+  background-color: #fff5f5;
+}
+
+.regularHours {
+  background-color: #ffebee;
+}
+
+.specialHours {
+  background-color: #e3f2fd;
+}
+
+.legend {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  background-color: #f9fafb;
+  border-radius: 8px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.legendColor {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 4px;
+}
+
+.legendColor.regularHours {
+  background-color: #ffebee;
+}
+
+.legendColor.specialHours {
+  background-color: #e3f2fd;
+}
+
+.legendColor.holiday {
+  background-color: #fff5f5;
+}
+
+@media (max-width: 768px) {
+  .calendarContainer {
+    padding: 1rem;
+  }
+
+  .monthTitle {
+    font-size: 1.5rem;
+  }
+
+  .calendarDay {
+    min-height: 60px;
+    padding: 0.5rem;
+  }
+
+  .dayNumber {
+    font-size: 1rem;
+  }
+
+  .clinicHours {
+    font-size: 0.75rem;
+  }
+
+  .legend {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
 } 

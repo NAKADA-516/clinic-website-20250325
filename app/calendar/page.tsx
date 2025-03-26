@@ -18,8 +18,16 @@ const CLINIC_HOURS: ClinicHoursType = {
   3: { open: "11:00", close: "17:00" }, // 水曜
   4: { open: "11:00", close: "17:00" }, // 木曜
   5: { open: "18:00", close: "22:00" }, // 金曜
-  6: { open: "11:00", close: "20:00" }, // 土曜
+  6: { open: "11:00", close: "20:00" }, // 土曜（土曜のみ20時まで）
   0: null, // 日曜（休診）
+};
+
+// 診療時間の説明
+const CLINIC_HOURS_DESCRIPTION = {
+  weekday: "11:00〜17:00",
+  friday: "18:00〜22:00",
+  saturday: "11:00〜20:00",
+  sunday: "休診"
 };
 
 // 特別診療日データ
@@ -153,69 +161,75 @@ export default function CalendarPage() {
   };
 
   const renderMonth = (monthData: MonthDataType) => (
-    <div key={format(monthData.date, 'yyyy-MM')} className="mb-8">
-      <div className="p-6 border-b border-gray-200">
-        <h2 className="text-xl font-bold text-center">
+    <div key={format(monthData.date, 'yyyy-MM')} className={styles.calendarContainer}>
+      <div className={styles.calendarHeader}>
+        <h2 className={styles.monthTitle}>
           {format(monthData.date, "yyyy年 M月", { locale: ja })}
         </h2>
       </div>
 
-      <div className="p-6">
+      <div className={styles.calendarGrid}>
         {/* Weekday Headers */}
-        <div className="grid grid-cols-7 gap-2 mb-4">
-          {["日", "月", "火", "水", "木", "金", "土"].map((day) => (
-            <div
-              key={day}
-              className={`
-                text-center font-medium py-2
-                ${day === "日" ? "text-red-500" : ""}
-                ${day === "土" ? "text-blue-500" : ""}
-              `}
-            >
-              {day}
-            </div>
-          ))}
-        </div>
+        {["日", "月", "火", "水", "木", "金", "土"].map((day, index) => (
+          <div
+            key={day}
+            className={`${styles.weekdayHeader} ${
+              index === 0 ? styles.sunday :
+              index === 6 ? styles.saturday : ""
+            }`}
+          >
+            {day}
+          </div>
+        ))}
 
         {/* Calendar Days */}
-        <div className="grid grid-cols-7 gap-2">
-          {monthData.days.map((day, index) => {
-            const clinicHours = getClinicHours(day);
-            const isHoliday = clinicHours.includes("休診") || clinicHours === "終了";
-            const dateStr = format(day, "yyyy-MM-dd");
-            const holidayName = HOLIDAY_DESCRIPTIONS[dateStr];
-            const isSpecialDay = SPECIAL_HOURS[dateStr];
-            
-            return (
-              <div
-                key={index}
-                className={`
-                  p-3 border rounded-lg
-                  ${isToday(day) ? "bg-[#E5F4F3]" : ""}
-                  ${!isSameMonth(day, monthData.date) ? "opacity-50" : ""}
-                  ${isHoliday ? "bg-gray-50" : ""}
-                  ${isSpecialDay ? "bg-blue-50" : ""}
-                  hover:shadow-md transition-shadow
-                `}
-              >
-                <div className={`
-                  text-sm font-medium mb-1
-                  ${day.getDay() === 0 || isHoliday ? "text-red-500" : ""}
-                  ${(day.getDay() === 6 && !isHoliday) || isSpecialDay ? "text-blue-500" : ""}
-                `}>
-                  {format(day, "d")}
-                </div>
-                <div className={`text-xs ${clinicHours === "終了" ? "text-gray-400" : "text-gray-600"}`}>
-                  {clinicHours}
-                </div>
-                {holidayName && (
-                  <div className="text-xs text-red-400 mt-1">
-                    {holidayName}
-                  </div>
-                )}
+        {monthData.days.map((day, index) => {
+          const clinicHours = getClinicHours(day);
+          const isHoliday = clinicHours.includes("休診") || clinicHours === "終了";
+          const dateStr = format(day, "yyyy-MM-dd");
+          const holidayName = HOLIDAY_DESCRIPTIONS[dateStr];
+          const isSpecialDay = SPECIAL_HOURS[dateStr];
+          
+          return (
+            <div
+              key={index}
+              className={`${styles.calendarDay} ${
+                isToday(day) ? styles.today : ""
+              } ${
+                isHoliday ? styles.holiday :
+                isSpecialDay ? styles.specialHours :
+                isSameMonth(day, monthData.date) ? styles.regularHours : ""
+              }`}
+            >
+              <div className={styles.dayNumber}>
+                {format(day, "d")}
               </div>
-            );
-          })}
+              <div className={styles.clinicHours}>
+                {clinicHours}
+              </div>
+              {holidayName && (
+                <div className={styles.holidayName}>
+                  {holidayName}
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Legend */}
+      <div className={styles.legend}>
+        <div className={styles.legendItem}>
+          <div className={`${styles.legendColor} ${styles.regularHours}`}></div>
+          <span>通常診療（11:00〜17:00）</span>
+        </div>
+        <div className={styles.legendItem}>
+          <div className={`${styles.legendColor} ${styles.specialHours}`}></div>
+          <span>金曜（18:00〜22:00）</span>
+        </div>
+        <div className={styles.legendItem}>
+          <div className={`${styles.legendColor} ${styles.holiday}`}></div>
+          <span>休診日</span>
         </div>
       </div>
     </div>
@@ -332,6 +346,8 @@ export default function CalendarPage() {
           </div>
         </div>
       </section>
+
+      {calendarMonths.map(monthData => renderMonth(monthData))}
     </main>
   );
 } 
