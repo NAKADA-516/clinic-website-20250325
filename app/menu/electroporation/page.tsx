@@ -2,8 +2,27 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import PriceTable from '../../components/PriceTable';
 
 export default function ElectroporationPage() {
+  const basicPriceItems = [
+    { menu: "エレクトロポレーション　１回", price: "￥15,000" },
+    { menu: "エレクトロポレーション　６回コース", price: "￥75,000" },
+    { menu: "エレクトロポレーション　１２回コース", price: "￥144,000" }
+  ];
+
+  const premiumPriceItems = [
+    { menu: "エレクトロポレーション + 細胞エクソソーム　１回", price: "￥90,000" },
+    { menu: "エレクトロポレーション + 細胞エクソソーム　６回コース", price: "￥450,000" },
+    { menu: "エレクトロポレーション + 細胞エクソソーム　１２回コース", price: "￥864,000" }
+  ];
+
+  const notes = [
+    "※ 表示価格は全て税込みです。",
+    "※ 初回カウンセリング料はいただいておりません。",
+    "※ 上記の施術は、公的医療保険が適用されない自由診療（自費診療）です。"
+  ];
+
   return (
     <main className="pt-32 pb-20 bg-gradient-to-b from-white to-[#f8fcfc]">
       <div className="container mx-auto px-4">
@@ -387,101 +406,41 @@ export default function ElectroporationPage() {
             </div>
           </section>
 
-          {/* Pricing Section */}
+          {/* 料金表セクション */}
           <section className="mb-20">
-            <h2 className="text-2xl font-bold mb-8 text-gray-900 border-b-2 border-[#40A99B]/30 pb-3 inline-block">
+            <h2 className="text-2xl font-bold mb-8 text-gray-900 border-b-2 border-[#81D8D0]/30 pb-3 inline-block">
               料金表
             </h2>
             
-            <div className="mb-12">
-              <h3 className="text-xl font-bold mb-6 text-[#40A99B] flex items-center">
-                <span className="bg-[#40A99B] w-2 h-6 rounded-full mr-3 inline-block"></span>
-                エレクトロポレーション
-              </h3>
+            <div className="space-y-8">
+              <PriceTable
+                title="エレクトロポレーション"
+                items={basicPriceItems}
+              />
               
-              <div className="overflow-x-auto">
-                <table className="min-w-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg mb-4">
-                  <thead>
-                    <tr className="bg-[#40A99B] text-white">
-                      <th className="py-3 px-6 text-left">メニュー</th>
-                      <th className="py-3 px-6 text-right">料金（税込）</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors">
-                      <td className="py-4 px-6 font-medium">エレクトロポレーション　１回</td>
-                      <td className="py-4 px-6 text-right">￥15,000</td>
-                    </tr>
-                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors">
-                      <td className="py-4 px-6 font-medium">エレクトロポレーション　６回コース</td>
-                      <td className="py-4 px-6 text-right">￥75,000</td>
-                    </tr>
-                    <tr className="hover:bg-gray-50 transition-colors">
-                      <td className="py-4 px-6 font-medium">エレクトロポレーション　１２回コース</td>
-                      <td className="py-4 px-6 text-right">￥144,000</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            
-            <div className="mb-12">
-              <h3 className="text-xl font-bold mb-6 text-[#40A99B] flex items-center">
-                <span className="bg-[#40A99B] w-2 h-6 rounded-full mr-3 inline-block"></span>
-                エレクトロポレーション + 細胞エクソソーム
-              </h3>
-              
-              <div className="overflow-x-auto">
-                <table className="min-w-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg mb-4">
-                  <thead>
-                    <tr className="bg-[#40A99B] text-white">
-                      <th className="py-3 px-6 text-left">メニュー</th>
-                      <th className="py-3 px-6 text-right">料金（税込）</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors">
-                      <td className="py-4 px-6 font-medium">エレクトロポレーション<br/>細胞エクソソーム　１回</td>
-                      <td className="py-4 px-6 text-right">￥90,000</td>
-                    </tr>
-                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors">
-                      <td className="py-4 px-6 font-medium">エレクトロポレーション<br/>細胞エクソソーム　６回コース</td>
-                      <td className="py-4 px-6 text-right">￥450,000</td>
-                    </tr>
-                    <tr className="hover:bg-gray-50 transition-colors">
-                      <td className="py-4 px-6 font-medium">エレクトロポレーション<br/>細胞エクソソーム　１２回コース</td>
-                      <td className="py-4 px-6 text-right">￥864,000</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            
-            <div className="bg-gray-50 p-4 rounded-lg mb-4">
-              <p className="text-sm text-gray-600 mb-2">
-                ※すべて税込価格です。
-              </p>
-              <p className="text-sm text-gray-600">
-                ※初回カウンセリング料はいただいておりません。
-              </p>
-            </div>
-
-            {/* 幹細胞エクソソームへのリンク */}
-            <div className="bg-[#f0f8f7] p-6 rounded-lg border border-[#40A99B]/30 mb-8 hover:shadow-md transition-shadow">
-              <div className="flex flex-col md:flex-row items-center justify-between">
-                <div>
-                  <h4 className="font-bold text-[#40A99B] text-lg mb-2">幹細胞エクソソームについて</h4>
-                  <p className="text-gray-700">最先端の再生医療技術を活用した幹細胞エクソソームの詳細な説明はこちらからご覧いただけます。</p>
-                </div>
-                <Link 
-                  href="/menu/exosome" 
-                  className="mt-4 md:mt-0 inline-block bg-white text-[#40A99B] border border-[#40A99B] px-6 py-2 rounded-lg hover:bg-[#40A99B] hover:text-white transition-colors shadow-sm"
-                >
-                  詳細はこちら →
-                </Link>
-              </div>
+              <PriceTable
+                title="エレクトロポレーション + 細胞エクソソーム"
+                items={premiumPriceItems}
+                notes={notes}
+              />
             </div>
           </section>
+
+          {/* 幹細胞エクソソームへのリンク */}
+          <div className="bg-[#f0f8f7] p-6 rounded-lg border border-[#40A99B]/30 mb-8 hover:shadow-md transition-shadow">
+            <div className="flex flex-col md:flex-row items-center justify-between">
+              <div>
+                <h4 className="font-bold text-[#40A99B] text-lg mb-2">幹細胞エクソソームについて</h4>
+                <p className="text-gray-700">最先端の再生医療技術を活用した幹細胞エクソソームの詳細な説明はこちらからご覧いただけます。</p>
+              </div>
+              <Link 
+                href="/menu/exosome" 
+                className="mt-4 md:mt-0 inline-block bg-white text-[#40A99B] border border-[#40A99B] px-6 py-2 rounded-lg hover:bg-[#40A99B] hover:text-white transition-colors shadow-sm"
+              >
+                詳細はこちら →
+              </Link>
+            </div>
+          </div>
 
           {/* Reservation CTA with Enhanced Design */}
           <div className="bg-gradient-to-r from-[#40A99B]/10 to-white p-8 rounded-xl shadow-lg mb-16 relative overflow-hidden">

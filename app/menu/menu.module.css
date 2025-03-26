@@ -51,8 +51,152 @@
   color: #666;
 }
 
+.heroSection {
+  background: linear-gradient(135deg, #81D8D0 0%, #65B5AA 100%);
+  padding: 6rem 2rem;
+  margin-bottom: 4rem;
+  border-radius: 0 0 2rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.heroContent h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.heroContent p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.menuSection {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menuContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 800px;
+  gap: 2rem;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.menuBlock {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.menuBlock:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.menuTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #40A99B;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #81D8D0;
+  position: relative;
+}
+
+.menuList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.menuItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f8fcfc;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.menuItem:hover {
+  background: #e6f7f5;
+  transform: scale(1.02);
+}
+
+.itemName {
+  font-size: 1rem;
+  color: #333;
+  flex: 1;
+}
+
+.itemPrice {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #40A99B;
+  margin-left: 1rem;
+}
+
+.menuSubCategory {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #40A99B;
+  margin: 1.5rem 0 1rem;
+  padding-left: 1rem;
+  border-left: 3px solid #81D8D0;
+}
+
+.comingSoon {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fcfc;
+  border-radius: 0.5rem;
+}
+
+.comingSoonText {
+  font-size: 1.2rem;
+  color: #40A99B;
+  font-weight: bold;
+}
+
 @media (max-width: 768px) {
   .menuGrid {
     grid-template-columns: 1fr;
   }
-} 
+  
+  .heroContent h1 {
+    font-size: 2.5rem;
+  }
+  
+  .menuContainer {
+    padding: 0.5rem;
+  }
+  
+  .menuBlock {
+    padding: 1.5rem;
+  }
+  
+  .menuItem {
+    padding: 0.8rem;
+  }
+}
