@@ -9,22 +9,28 @@ interface PriceItem {
 interface PriceTableProps {
   title: string;
   items: PriceItem[];
+  notes?: string[];
 }
 
-const PriceTable: React.FC<PriceTableProps> = ({ title, items }) => {
+export default function PriceTable({ title, items, notes }: PriceTableProps) {
   return (
-    <div className={styles.priceTable}>
-      <h3 className={styles.title}>{title}</h3>
-      <div className={styles.items}>
+    <div className={styles.priceSection}>
+      <h2 className={styles.priceTitle}>{title}</h2>
+      <div className={styles.priceItems}>
         {items.map((item, index) => (
-          <div key={index} className={styles.item}>
-            <span className={styles.name}>{item.name}</span>
-            <span className={styles.price}>{item.price}</span>
+          <div key={index} className={styles.priceItem}>
+            <span className={styles.itemName}>{item.name}</span>
+            <span className={styles.itemPrice}>{item.price}</span>
           </div>
         ))}
       </div>
+      {notes && notes.length > 0 && (
+        <div className={styles.notes}>
+          {notes.map((note, index) => (
+            <p key={index} className={styles.note}>{note}</p>
+          ))}
+        </div>
+      )}
     </div>
   );
-};
-
-export default PriceTable; 
+} 
