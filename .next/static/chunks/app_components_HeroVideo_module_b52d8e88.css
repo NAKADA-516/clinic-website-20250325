@@ -1,0 +1,88 @@
+/* [project]/app/components/HeroVideo.module.css [app-client] (css) */
+.HeroVideo-module__PPp3Tq__hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.HeroVideo-module__PPp3Tq__videoWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.HeroVideo-module__PPp3Tq__video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.HeroVideo-module__PPp3Tq__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #0006;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.HeroVideo-module__PPp3Tq__content {
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+
+.HeroVideo-module__PPp3Tq__title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #00000080;
+}
+
+.HeroVideo-module__PPp3Tq__subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px #00000080;
+}
+
+.HeroVideo-module__PPp3Tq__ctaButton {
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: background-color .3s;
+}
+
+.HeroVideo-module__PPp3Tq__ctaButton:hover {
+  background-color: #0056b3;
+}
+
+@media (width <= 768px) {
+  .HeroVideo-module__PPp3Tq__title {
+    font-size: 2rem;
+  }
+
+  .HeroVideo-module__PPp3Tq__subtitle {
+    font-size: 1.2rem;
+  }
+
+  .HeroVideo-module__PPp3Tq__ctaButton {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+}
+
+/*# sourceMappingURL=app_components_HeroVideo_module_b52d8e88.css.map*/

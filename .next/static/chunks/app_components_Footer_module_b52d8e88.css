@@ -1,0 +1,64 @@
+/* [project]/app/components/Footer.module.css [app-client] (css) */
+.Footer-module__nhiC3q__footer {
+  background-color: #f8f8f8;
+  padding: 40px 0;
+  margin-top: 60px;
+}
+
+.Footer-module__nhiC3q__footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.Footer-module__nhiC3q__footerGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.Footer-module__nhiC3q__footerSection h3 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.Footer-module__nhiC3q__footerSection ul {
+  list-style: none;
+  padding: 0;
+}
+
+.Footer-module__nhiC3q__footerSection ul li {
+  margin-bottom: 10px;
+}
+
+.Footer-module__nhiC3q__footerSection ul li a {
+  color: #666;
+  text-decoration: none;
+  transition: color .3s;
+}
+
+.Footer-module__nhiC3q__footerSection ul li a:hover {
+  color: #000;
+}
+
+.Footer-module__nhiC3q__footerBottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.Footer-module__nhiC3q__footerBottom p {
+  color: #666;
+  font-size: .9rem;
+}
+
+@media (width <= 768px) {
+  .Footer-module__nhiC3q__footerGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+/*# sourceMappingURL=app_components_Footer_module_b52d8e88.css.map*/

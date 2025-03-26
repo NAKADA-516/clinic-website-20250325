@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/rikak/Desktop/clinic-website-20250325/app/menu/layout.tsx"],"sourcesContent":["import { Metadata } from \"next\";\r\n\r\nexport const metadata: Metadata = {\r\n  title: 'メニュー・料金 | 美容クリニック',\r\n  description: '美容クリニックの施術メニューと料金のご案内。ヒアルロン酸注入やその他の美容治療について詳しくご紹介いたします。',\r\n};\r\n\r\nexport default function MenuLayout({\r\n  children,\r\n}: {\r\n  children: React.ReactNode;\r\n}) {\r\n  return (\r\n    <div>\r\n      {children}\r\n    </div>\r\n  );\r\n} "],"names":[],"mappings":";;;;;;AAEO,MAAM,WAAqB;IAChC,OAAO;IACP,aAAa;AACf;AAEe,SAAS,WAAW,EACjC,QAAQ,EAGT;IACC,qBACE,8OAAC;kBACE;;;;;;AAGP","debugId":null}},
+    {"offset": {"line": 26, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}
