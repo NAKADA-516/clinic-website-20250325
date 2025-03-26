@@ -153,4 +153,246 @@
     flex-wrap: wrap;
     gap: 1rem;
   }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* ヒーローセクション */
+.heroSection {
+  background: linear-gradient(135deg, #81D8D0 0%, #5F9EA0 100%);
+  border-radius: 16px;
+  padding: 4rem 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.heroContent h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.heroContent p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* 予約方法セクション */
+.reservationSection {
+  margin-bottom: 3rem;
+}
+
+.sectionInner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: #81D8D0;
+}
+
+.reservationMethods {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.methodCard {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.methodCard:hover {
+  transform: translateY(-4px);
+}
+
+.methodCard h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.methodCard p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.methodButton {
+  background: #81D8D0;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.methodButton:hover {
+  background: #5F9EA0;
+}
+
+/* 診療時間セクション */
+.scheduleSection {
+  margin-bottom: 3rem;
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.scheduleTable {
+  overflow-x: auto;
+  margin-top: 2rem;
+}
+
+.scheduleTable table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.scheduleTable th,
+.scheduleTable td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.scheduleTable th {
+  background: #f8f9fa;
+  font-weight: bold;
+  color: #333;
+}
+
+.scheduleTable td {
+  color: #666;
+}
+
+.scheduleNote {
+  margin-top: 1rem;
+  color: #666;
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+/* 注意事項セクション */
+.noticeSection {
+  margin-bottom: 3rem;
+}
+
+.noticeList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.noticeItem {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.noticeItem h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.noticeItem h3::before {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 1em;
+  background: #81D8D0;
+  border-radius: 2px;
+}
+
+.noticeItem p {
+  color: #666;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 3rem 1.5rem;
+  }
+
+  .heroContent h1 {
+    font-size: 2rem;
+  }
+
+  .heroContent p {
+    font-size: 1.1rem;
+  }
+
+  .reservationMethods {
+    grid-template-columns: 1fr;
+  }
+
+  .methodCard {
+    padding: 1.5rem;
+  }
+
+  .scheduleSection {
+    padding: 1.5rem;
+  }
+
+  .scheduleTable {
+    margin: 1rem -1rem;
+    padding: 0 1rem;
+  }
+
+  .scheduleTable th,
+  .scheduleTable td {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .noticeList {
+    grid-template-columns: 1fr;
+  }
+
+  .noticeItem {
+    padding: 1.5rem;
+  }
 } 
