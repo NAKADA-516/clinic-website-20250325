@@ -12,7 +12,6 @@ import HeroVideo from './components/HeroVideo'
 import PickupMenu from './components/PickupMenu'
 import DoctorProfile from './components/DoctorProfile'
 import Header from './components/Header'
-import { Metadata } from 'next';
 
 export default function Home() {
   return (
@@ -98,131 +97,6 @@ export default function Home() {
               <p className={styles.price}>¥210,000<span className={styles.tax}>(税込)</span></p>
             </div>
           </div>
-
-          <div className={styles.pickupItem}>
-            <div className={styles.imageWrapper}>
-              <Image
-                src="/images/pickup/tightening.jpg"
-                alt="タイトニングセット"
-                width={400}
-                height={400}
-                className={styles.pickupImage}
-                priority
-              />
-            </div>
-            <div className={styles.pickupContent}>
-              <h3>タイトニングセット</h3>
-              <p>ハイドラ + ポテンツァタイトニング + エレクトロポレーション</p>
-              <p className={styles.price}>¥59,800<span className={styles.tax}>(税込)</span></p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* NEWS セクション */}
-      <section className={styles.section}>
-        <div className={styles.sectionTitle}>
-          <h2 className={styles.mainTitle}>NEWS</h2>
-          <p className={styles.subTitle}>お知らせ</p>
-        </div>
-        <div className={styles.newsContainer}>
-          <div className={styles.newsItem}>
-            <Link href="/news/nurse-recruitment-202403" className={styles.newsLink}>
-              <div className={styles.newsDate}>2024.03</div>
-              <div className={styles.newsTitle}>看護師募集のお知らせ</div>
-            </Link>
-          </div>
-
-          <div className={styles.newsItem}>
-            <Link href="/news/rejuran-derma" className={styles.newsLink}>
-              <div className={styles.newsDate}>2024.03</div>
-              <div className={styles.newsTitle}>リジュランデルマ導入のお知らせ</div>
-            </Link>
-          </div>
-
-          <div className={styles.newsItem}>
-            <Link href="/news/website-renewal" className={styles.newsLink}>
-              <div className={styles.newsDate}>2024.03</div>
-              <div className={styles.newsTitle}>ウェブサイトリニューアルのお知らせ</div>
-            </Link>
-          </div>
-        </div>
-        <div className={styles.newsMore}>
-          <Link href="/news" className={styles.moreButton}>
-            もっと見る
-          </Link>
-        </div>
-      </section>
-
-      {/* MENU セクション */}
-      <section className={styles.section}>
-        <div className={styles.sectionTitle}>
-          <h2 className={styles.mainTitle}>MENU</h2>
-          <p className={styles.subTitle}>診療メニュー</p>
-        </div>
-        <div className={styles.menuContainer}>
-          <div className={styles.menuItem}>
-            <div className={styles.menuContent}>
-              <h3 className={styles.menuTitle}>
-                再生治療・美容注入
-                <span className={styles.menuSubTitle}>（エイジングケア・ボリュームアップ）</span>
-              </h3>
-              <div className={styles.subMenuList}>
-                <Link href="/menu/exosome" className={styles.subMenuItem}>幹細胞エクソソーム</Link>
-                <Link href="/menu/hyaluronan" className={styles.subMenuItem}>ヒアルロン酸</Link>
-                <Link href="/menu/botox" className={styles.subMenuItem}>ボツリヌストキシン注射</Link>
-                <Link href="/menu/juvederm" className={styles.subMenuItem}>ジュベルック</Link>
-                <Link href="/menu/rejuran" className={styles.subMenuItem}>リジュラン</Link>
-              </div>
-            </div>
-          </div>
-
-          <div className={styles.menuItem}>
-            <div className={styles.menuContent}>
-              <h3 className={styles.menuTitle}>
-                美肌治療
-                <span className={styles.menuSubTitle}>（肌質改善・毛穴・ハリ）</span>
-              </h3>
-              <div className={styles.subMenuList}>
-                <Link href="/menu/dermapen" className={styles.subMenuItem}>ダーマペン</Link>
-                <Link href="/menu/potenza" className={styles.subMenuItem}>ポテンツァ</Link>
-                <Link href="/menu/laser-facial" className={styles.subMenuItem}>レーザーフェイシャル</Link>
-                <Link href="/menu/electroporation" className={styles.subMenuItem}>エレクトロポレーション</Link>
-                <Link href="/menu/massage-peel" className={styles.subMenuItem}>マッサージピール</Link>
-                <Link href="/menu/hydrafacial" className={styles.subMenuItem}>ハイドラフェイシャル</Link>
-              </div>
-            </div>
-          </div>
-
-          <div className={styles.menuItem}>
-            <div className={styles.menuContent}>
-              <h3 className={styles.menuTitle}>
-                点滴・内服・スキンケア
-                <span className={styles.menuSubTitle}>（体内からの美容と健康）</span>
-              </h3>
-              <div className={styles.subMenuList}>
-                <Link href="/menu/vitamin-c-drip" className={styles.subMenuItem}>高濃度ビタミンC点滴</Link>
-                <Link href="/menu/vitamin-c-injection" className={styles.subMenuItem}>ビタミンC注射</Link>
-                <Link href="/menu/garlic-injection" className={styles.subMenuItem}>にんにく注射</Link>
-                <Link href="/menu/placenta-injection" className={styles.subMenuItem}>プラセンタ注射</Link>
-                <Link href="/menu/white-drip" className={styles.subMenuItem}>白玉点滴</Link>
-                <Link href="/menu/kenacort" className={styles.subMenuItem}>ケナコルト注射</Link>
-                <Link href="/menu/nutrition" className={styles.subMenuItem}>栄養療法（血液検査含む）</Link>
-              </div>
-            </div>
-          </div>
-
-          <div className={styles.menuItem}>
-            <div className={styles.menuContent}>
-              <h3 className={styles.menuTitle}>
-                脱毛
-                <span className={styles.menuSubTitle}>（医療レーザー脱毛）</span>
-              </h3>
-              <div className={styles.subMenuList}>
-                <Link href="/menu/partial-hair-removal" className={styles.subMenuItem}>部分脱毛</Link>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -234,20 +108,6 @@ export default function Home() {
         </div>
         <DoctorProfile />
       </section>
-
-      {/* ACCESS セクション */}
-      <section className={styles.section}>
-        <div className={styles.sectionTitle}>
-          <h2 className={styles.mainTitle}>ACCESS</h2>
-          <p className={styles.subTitle}>アクセス</p>
-        </div>
-        {/* 既存のコンテンツ */}
-      </section>
     </div>
   );
 }
-
-export const metadata: Metadata = {
-  title: 'ヨヨギビューティークリニック | 美容医療',
-  description: '高品質な美容医療サービスを提供する当院では、最新の治療法と確かな技術で、あなたの美しさを引き出します。',
-};
