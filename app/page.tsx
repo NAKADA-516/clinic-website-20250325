@@ -90,58 +90,92 @@ export default function Home() {
           <div className={styles.menuItem}>
             <h3 className={styles.menuTitle}>再生治療・美容注入</h3>
             <p className={styles.menuSubtitle}>
-              エイジングケア・ボリュームアップ<br />
-              最新の再生医療技術と美容注入治療で、自然な若々しさと理想的なフェイスラインを実現します。
+              自然な若返りと美しいフェイスライン
             </p>
             <div className={styles.menuList}>
-              <div className={styles.menuListItem}>幹細胞エクソソーム</div>
-              <div className={styles.menuListItem}>ヒアルロン酸</div>
-              <div className={styles.menuListItem}>ボツリヌストキシン注射</div>
-              <div className={styles.menuListItem}>ジュベルック</div>
-              <div className={styles.menuListItem}>リジュラン</div>
+              <Link href="/menu/exosome" className={styles.menuListItemLink}>
+                <div className={styles.menuListItem}>幹細胞エクソソーム</div>
+              </Link>
+              <Link href="/menu/hyaluronic-acid" className={styles.menuListItemLink}>
+                <div className={styles.menuListItem}>ヒアルロン酸</div>
+              </Link>
+              <Link href="/menu/botox" className={styles.menuListItemLink}>
+                <div className={styles.menuListItem}>ボツリヌストキシン注射</div>
+              </Link>
+              <Link href="/menu/juvelook" className={styles.menuListItemLink}>
+                <div className={styles.menuListItem}>ジュベルック</div>
+              </Link>
+              <Link href="/menu/rejuran" className={styles.menuListItemLink}>
+                <div className={styles.menuListItem}>リジュラン</div>
+              </Link>
             </div>
           </div>
 
           <div className={styles.menuItem}>
             <h3 className={styles.menuTitle}>美肌治療</h3>
             <p className={styles.menuSubtitle}>
-              肌質改善・毛穴・ハリ<br />
-              最新の医療機器と技術を組み合わせて、お肌の悩みに合わせた最適な治療プランをご提案します。
+              透明感とハリのある素肌へ
             </p>
             <div className={styles.menuList}>
-              <div className={styles.menuListItem}>ダーマペン</div>
-              <div className={styles.menuListItem}>ポテンツァ</div>
-              <div className={styles.menuListItem}>レーザーフェイシャル</div>
-              <div className={styles.menuListItem}>エレクトロポレーション</div>
-              <div className={styles.menuListItem}>マッサージピール トライアル</div>
-              <div className={styles.menuListItem}>ハイドラフェイシャル</div>
+              <Link href="/menu/dermapen" className={styles.menuListItemLink}>
+                <div className={styles.menuListItem}>ダーマペン</div>
+              </Link>
+              <Link href="/menu/potenza" className={styles.menuListItemLink}>
+                <div className={styles.menuListItem}>ポテンツァ</div>
+              </Link>
+              <Link href="/menu/laser-facial" className={styles.menuListItemLink}>
+                <div className={styles.menuListItem}>レーザーフェイシャル</div>
+              </Link>
+              <Link href="/menu/electroporation" className={styles.menuListItemLink}>
+                <div className={styles.menuListItem}>エレクトロポレーション</div>
+              </Link>
+              <Link href="/menu/massage-peel" className={styles.menuListItemLink}>
+                <div className={styles.menuListItem}>マッサージピール トライアル</div>
+              </Link>
+              <Link href="/menu/hydrafacial" className={styles.menuListItemLink}>
+                <div className={styles.menuListItem}>ハイドラフェイシャル</div>
+              </Link>
             </div>
           </div>
 
           <div className={styles.menuItem}>
-            <h3 className={styles.menuTitle}>点滴・内服・スキンケア</h3>
+            <h3 className={styles.menuTitle}>美容注射・点滴・その他</h3>
             <p className={styles.menuSubtitle}>
-              体内からの美容と健康<br />
-              お体の内側からのケアで、美容効果と健康増進を同時にサポートします。
+              内側からの美容改善と健康増進
             </p>
             <div className={styles.menuList}>
-              <div className={styles.menuListItem}>栄養療法（血液検査含む）</div>
-              <div className={styles.menuListItem}>ビタミンC 注射 静注</div>
-              <div className={styles.menuListItem}>にんにく注射 静注</div>
-              <div className={styles.menuListItem}>プラセンタ注射</div>
-              <div className={styles.menuListItem}>疲労回復スペシャル注射</div>
-              <div className={styles.menuListItem}>白玉点滴</div>
-              <div className={styles.menuListItem}>ケナコルト注射</div>
-              <div className={styles.menuListItem}>高濃度ビタミンC 点滴</div>
+              <Link href="/menu/white-drip" className={styles.menuListItemLink}>
+                <div className={styles.menuListItem}>白玉点滴</div>
+              </Link>
+              <Link href="/menu/vitamin-c" className={styles.menuListItemLink}>
+                <div className={styles.menuListItem}>高濃度ビタミンC点滴</div>
+              </Link>
+              <Link href="/menu/vitamin-c" className={styles.menuListItemLink}>
+                <div className={styles.menuListItem}>ビタミンC注射</div>
+              </Link>
+              <Link href="/menu/garlic-injection" className={styles.menuListItemLink}>
+                <div className={styles.menuListItem}>にんにく注射</div>
+              </Link>
+              <Link href="/menu/placenta-injection" className={styles.menuListItemLink}>
+                <div className={styles.menuListItem}>プラセンタ注射</div>
+              </Link>
+              <Link href="/menu/nutrition" className={styles.menuListItemLink}>
+                <div className={styles.menuListItem}>栄養療法（血液検査含む）</div>
+              </Link>
+              <div className={styles.menuListItem}>ケナコルト注射（炎症やアレルギー対策）</div>
             </div>
           </div>
 
           <div className={styles.menuItem}>
             <h3 className={styles.menuTitle}>医療脱毛</h3>
             <p className={styles.menuSubtitle}>
-              安全で効果的な脱毛治療<br />
-              医療レーザーによる安全で効果的な脱毛治療。顔や腕、脚など、部位に合わせた最適な施術プランをご提案いたします。
+              安全・確実な永久脱毛
             </p>
+            <div className={styles.menuList}>
+              <Link href="/menu/hair-removal" className={styles.menuListItemLink}>
+                <div className={styles.menuListItem}>医療脱毛</div>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
