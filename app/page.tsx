@@ -58,7 +58,7 @@ export default function Home() {
         <div className={styles.sectionTitle}>
           <h2 className={styles.mainTitle}>PICK UP</h2>
           <p className={styles.subTitle}>おすすめメニュー</p>
-          </div>
+        </div>
         <div className={styles.pickupContainer}>
           <div className={styles.pickupItem}>
             <div className={styles.imageWrapper}>
@@ -83,32 +83,32 @@ export default function Home() {
 
           <div className={styles.pickupItem}>
             <div className={styles.imageWrapper}>
-                  <Image
+              <Image
                 src="/images/pickup/small-face.jpg"
                 alt="ヒアルロン酸小顔セット"
-                    width={400}
+                width={400}
                 height={400}
                 className={styles.pickupImage}
-                    priority
-                  />
-                </div>
+                priority
+              />
+            </div>
             <div className={styles.pickupContent}>
               <h3>ヒアルロン酸小顔セット</h3>
               <p>ヒアルロン酸3本</p>
               <p className={styles.price}>¥210,000<span className={styles.tax}>(税込)</span></p>
             </div>
-            </div>
+          </div>
 
           <div className={styles.pickupItem}>
             <div className={styles.imageWrapper}>
-                  <Image
-                    src="/images/pickup/tightening.jpg"
-                    alt="タイトニングセット"
-                    width={400}
+              <Image
+                src="/images/pickup/tightening.jpg"
+                alt="タイトニングセット"
+                width={400}
                 height={400}
                 className={styles.pickupImage}
-                    priority
-                  />
+                priority
+              />
             </div>
             <div className={styles.pickupContent}>
               <h3>タイトニングセット</h3>
@@ -137,8 +137,8 @@ export default function Home() {
             <Link href="/news/rejuran-derma" className={styles.newsLink}>
               <div className={styles.newsDate}>2024.03</div>
               <div className={styles.newsTitle}>リジュランデルマ導入のお知らせ</div>
-                    </Link>
-              </div>
+            </Link>
+          </div>
 
           <div className={styles.newsItem}>
             <Link href="/news/website-renewal" className={styles.newsLink}>
@@ -146,11 +146,11 @@ export default function Home() {
               <div className={styles.newsTitle}>ウェブサイトリニューアルのお知らせ</div>
             </Link>
           </div>
-                </div>
+        </div>
         <div className={styles.newsMore}>
           <Link href="/news" className={styles.moreButton}>
             もっと見る
-                    </Link>
+          </Link>
         </div>
       </section>
 
@@ -175,7 +175,7 @@ export default function Home() {
                 <Link href="/menu/rejuran" className={styles.subMenuItem}>リジュラン</Link>
               </div>
             </div>
-                </div>
+          </div>
 
           <div className={styles.menuItem}>
             <div className={styles.menuContent}>
@@ -192,7 +192,7 @@ export default function Home() {
                 <Link href="/menu/hydrafacial" className={styles.subMenuItem}>ハイドラフェイシャル</Link>
               </div>
             </div>
-                </div>
+          </div>
 
           <div className={styles.menuItem}>
             <div className={styles.menuContent}>
@@ -220,7 +220,7 @@ export default function Home() {
               </h3>
               <div className={styles.subMenuList}>
                 <Link href="/menu/partial-hair-removal" className={styles.subMenuItem}>部分脱毛</Link>
-        </div>
+              </div>
             </div>
           </div>
         </div>
@@ -230,38 +230,9 @@ export default function Home() {
       <section className={styles.section}>
         <div className={styles.sectionTitle}>
           <h2 className={styles.mainTitle}>DOCTOR</h2>
-          <p className={styles.subTitle}>医師紹介</p>
-          </div>
-        <div className={styles.doctorContainer}>
-          <div className={styles.doctorProfile}>
-            <div className={styles.doctorImageWrapper}>
-                  <Image
-                    src="/images/doctor-new.jpg"
-                alt="院長 吉川 とも子 医師"
-                width={300}
-                height={400}
-                className={styles.doctorImage}
-                    priority
-                  />
-                </div>
-            <div className={styles.doctorInfo}>
-              <h3 className={styles.doctorName}>院長 吉川 とも子</h3>
-              <div className={styles.doctorCredentials}>
-                <h4>【資格/所属】</h4>
-                <ul>
-                  <li>代々木駅前美容クリニック院長</li>
-                  <li>ボトックスビスタ認定医</li>
-                  <li>ジュビダームビスタ認定医</li>
-                  <li>山口大学医学部卒</li>
-                    </ul>
-                  </div>
-              <div className={styles.doctorDescription}>
-                <p>代々木駅前美容クリニックは2023年6月に開業しました。以前は熊本県の美容皮膚科クリニックで院長を務めていましたが、2024年3月より当院の院長に就任させていただきました。</p>
-                <p>診療科目は美容皮膚科です。美容エステサロンとは異なり、医師による美容面のお悩み相談にも細かく対応しているのが当院の特徴の一つです。また、内服や注射、スキンケア商品なども扱っております。</p>
-              </div>
-            </div>
-          </div>
+          <p className={styles.subTitle}>院長紹介</p>
         </div>
+        <DoctorProfile />
       </section>
 
       {/* ACCESS セクション */}
