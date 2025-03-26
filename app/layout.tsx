@@ -28,7 +28,7 @@ const zenKaku = Zen_Kaku_Gothic_New({
 })
 
 export const metadata: Metadata = {
-  title: "クリニック名 | 美容医療",
+  title: "ヨヨギビューティークリニック | 美容医療",
   description: "高品質な美容医療サービスを提供する当院では、最新の治療法と確かな技術で、あなたの美しさを引き出します。",
 };
 
