@@ -17,7 +17,7 @@ export default function HeroVideo() {
         </video>
         <div className={styles.overlay}>
           <div className={styles.content}>
-            <h1 className={styles.title}>代々木駅前美容クリニック</h1>
+            <h1 className={styles.title}>ヨヨギビューティークリニック</h1>
             <p className={styles.subtitle}>あなたの美しさを引き出す</p>
             <a href="/reservation" className={styles.ctaButton}>
               予約する

@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 :root {
+  --primary-color: #81D8D0;  /* ティファニーブルー */
+  --secondary-color: #007bff;
+  --text-color: #333;
+  --background-color: #fff;
+  --accent-color: #ff6b6b;
   --background: #ffffff;
   --foreground: #171717;
   --font-heading: var(--font-zen-kaku);
