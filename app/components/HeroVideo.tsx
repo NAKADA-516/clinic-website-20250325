@@ -37,7 +37,7 @@ export default function HeroVideo() {
         playsInline
         poster="/images/hero-poster.jpg"
       >
-        <source src="/videos/hero-video.mp4" type="video/mp4" />
+        <source src="/videos/hero-video.mp4?v=2" type="video/mp4" />
       </video>
       <div className={styles.overlay}></div>
     </section>
