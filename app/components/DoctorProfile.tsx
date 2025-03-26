@@ -7,7 +7,7 @@ const DoctorProfile = () => {
     <div className={styles.doctorContainer}>
       <div className={styles.doctorImage}>
         <Image
-          src="/images/doctor-new.jpg"
+          src="/images/doctor/doctor-new.jpg"
           alt="院長 吉川 とも子"
           width={400}
           height={500}
