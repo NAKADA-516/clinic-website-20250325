@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/components/Footer.module.css"],"sourcesContent":[".footer {\r\n  background-color: #f8f8f8;\r\n  padding: 40px 0;\r\n  margin-top: 60px;\r\n}\r\n\r\n.footerContent {\r\n  max-width: 1200px;\r\n  margin: 0 auto;\r\n  padding: 0 20px;\r\n}\r\n\r\n.footerGrid {\r\n  display: grid;\r\n  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));\r\n  gap: 40px;\r\n  margin-bottom: 40px;\r\n}\r\n\r\n.footerSection h3 {\r\n  font-size: 1.2rem;\r\n  margin-bottom: 20px;\r\n  color: #333;\r\n}\r\n\r\n.footerSection ul {\r\n  list-style: none;\r\n  padding: 0;\r\n}\r\n\r\n.footerSection ul li {\r\n  margin-bottom: 10px;\r\n}\r\n\r\n.footerSection ul li a {\r\n  color: #666;\r\n  text-decoration: none;\r\n  transition: color 0.3s ease;\r\n}\r\n\r\n.footerSection ul li a:hover {\r\n  color: #000;\r\n}\r\n\r\n.footerBottom {\r\n  text-align: center;\r\n  padding-top: 20px;\r\n  border-top: 1px solid #ddd;\r\n}\r\n\r\n.footerBottom p {\r\n  color: #666;\r\n  font-size: 0.9rem;\r\n}\r\n\r\n@media (max-width: 768px) {\r\n  .footerGrid {\r\n    grid-template-columns: 1fr;\r\n    gap: 30px;\r\n  }\r\n} "],"names":[],"mappings":"AAAA;;;;;;AAMA;;;;;;AAMA;;;;;;;AAOA;;;;;;AAMA;;;;;AAKA;;;;AAIA;;;;;;AAMA;;;;AAIA;;;;;;AAMA;;;;;AAKA;EACE"}},
-    {"offset": {"line": 62, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}
