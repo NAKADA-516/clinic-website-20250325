@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Noto_Serif_JP, Noto_Sans_JP, Zen_Kaku_Gothic_New } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Header from '@/app/components/Header'
+import Footer from '@/app/components/Footer'
 
 const inter = Inter({ subsets: ["latin"] });
 
