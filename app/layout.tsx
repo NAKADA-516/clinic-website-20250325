@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import { metadata as rootMetadata } from './metadata'
 import type { Metadata } from 'next'
+import Navigation from './components/Navigation'
 
 const montserrat = Montserrat({ 
   subsets: ['latin'],
@@ -17,7 +18,10 @@ const notoSansJP = Noto_Sans_JP({
   variable: '--font-noto-sans-jp',
 })
 
-export const metadata: Metadata = rootMetadata;
+export const metadata: Metadata = {
+  title: "代々木駅前美容クリニック",
+  description: "代々木駅前美容クリニックの公式ウェブサイトです。",
+}
 
 export default function RootLayout({
   children,
@@ -27,8 +31,9 @@ export default function RootLayout({
   return (
     <html lang="ja" className={`${montserrat.variable} ${notoSansJP.variable}`}>
       <body>
+        <Navigation />
         <Header />
-        <main style={{ paddingTop: '80px' }}>{children}</main>
+        <main style={{ paddingTop: '4rem' }}>{children}</main>
         <Footer />
       </body>
     </html>
